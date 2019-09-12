@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    justify-content: center;
+    color: indianred;
+    height: 2em;
+    margin: 3em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    margin: 1em;
+    background-color: gold;
+}
+
+button {
+    height: 8em;
+}

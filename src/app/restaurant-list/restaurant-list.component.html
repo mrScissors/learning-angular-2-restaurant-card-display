@@ -1,0 +1,13 @@
+<div *ngIf="show">
+        <nav><h2>Restaurants Near You!</h2></nav>
+
+
+
+<section class="buttons" *ngFor="let restau of restaurants">
+        <button mat-stroked-button (click)="goRestaurant(restau)">{{restau.name}}</button>
+</section>
+
+</div>
+
+
+

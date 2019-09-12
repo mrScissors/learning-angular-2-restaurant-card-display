@@ -1,0 +1,28 @@
+<p>You have selected Restaurant {{restaurants[restoId-1].name}}</p>
+
+
+<hr>
+ 
+<form class="example-form" #userForm="ngForm">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Name" value="Donald Duck">
+  </mat-form-field>
+    
+    <br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Fabourite Food" value="Fries">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="Date" ngModel [ngModelOptions]="{standalone: true}">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+</form>
+
+<button mat-stroked-button routerLink="../confirmation/{{restoId}}" (click)="setDateForm(Date)">Confirm</button>
+
